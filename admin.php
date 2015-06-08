@@ -81,7 +81,7 @@ if(!empty($_POST['id'])){
                 $style = "color:#333;";
         }
 
-        if( $day == $now_day ){
+        if( ($day == $now_day)&&($mm == $now_month) ){
             $style = $style." background:silver"; //今日の背景色
         }
         //スタイルシートの値設定ここまで-----------------------------------
