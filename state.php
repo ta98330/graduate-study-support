@@ -57,7 +57,7 @@
             <!-- 折りたたまれ -->
             <div id="Future_Schedule" style="display:none;clear:both;">
             <!--ここに書いたものが上述の「クリックで展開」をクリックすると表示される-->
-            <table border="1"><br /><tr><th>日付</th><th>時間</th><th>場所</th><th>内容</th></tr><br />
+            <table border="1"></th><tr><th>日付</th><th>時間</th><th>場所</th><th>内容</th></tr><br />
             <?php 
                 
             $pdo = new PDO("mysql:dbname={$_SESSION['dbname']}", "{$_SESSION['dbusername']}", "{$_SESSION['dbpass']}");
@@ -74,7 +74,22 @@
             $time = htmlspecialchars($row['time']);
             $place = htmlspecialchars($row['place']);
             $content = htmlspecialchars($row['content']);
-            echo "<tr><td>$date</td><td>$time</td><td>$place</td><td>$content</td></tr>";
+            echo "<tr><td>$date</td><td>$time</td><td>$place</td><td>$content</td>";
+            
+            if(!empty($_SESSION['userId'])){
+                //予定取り消し
+                echo "<td><form name='taskcansel' action='task_insert.php' method='post'>";
+                echo "<input type='hidden' name='deldate' value='$date'>";
+                echo "<input type='hidden' name='delcontent' value='$content'>";
+                echo "<input type='submit' value='取り消し'>";
+                echo "</form></td>";
+            }
+            
+                
+            echo "</tr>";    
+                
+                
+            
         }
         
             ?>

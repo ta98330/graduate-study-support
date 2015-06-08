@@ -39,12 +39,45 @@
         $st1 = $pdo->query("DELETE FROM task WHERE date < now() - INTERVAL 1 DAY");
         
     }
-    else{
+    /*else{
         echo "<p>予定内容を入力してください．</p>";
+    }*/
+
+    //予定の取り消し
+    if(!empty($_POST['deldate'])){
+        $pdo = new PDO("mysql:dbname={$_SESSION['dbname']}", "{$_SESSION['dbusername']}", "{$_SESSION['dbpass']}");
+        
+        $st = $pdo->query("DELETE FROM task WHERE date = '{$_POST['deldate']}' AND content = '{$_POST['delcontent']}'");
+        
+        
+        echo "<p>予定を取り消しました．</p>";
+         
     }
+
+
+
+
+
+
+
+
+
+
+
+
     ?>
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <a href="top.php">戻る</a>
     <p>3秒後に自動で戻ります．</p>
 
