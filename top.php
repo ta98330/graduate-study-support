@@ -225,6 +225,8 @@
                   <input type="submit">
                 </form>
             </section>
+                
+            <hr />
 
             <section>    
                 <h2>パスワード変更</h2>
@@ -244,7 +246,22 @@
                 <input type="password" name="pass" required>
                 <input type="submit">
                 </form>
-             </section>   
+            </section>
+            
+            
+            <section id="update">
+                <h2>更新情報</h2>
+                <ul>
+                <li><time>2015.6.8</time>　管理者ページで掲示板のリセットが出来るようになりました．</li>
+                <li><time>2015.6.8</time>　予定の削除ができるようになりました．今後の予定ボタンから行えます．</li>
+                <li><time>2015.6.8</time>　更新情報の掲載を開始しました．</li>
+                
+                
+                
+                
+                
+                </ul>
+             </section>
 
 
             </div>    

@@ -58,8 +58,11 @@
                         
             ?>
             
-                <p><textarea name="contributeContent" maxlength='200' required></textarea>
-                <input type="submit" value='書き込む'></p>        
+                <p><textarea name="contributeContent" maxlength='200'></textarea>
+                <input type="submit" value='書き込む'></p>
+                
+                
+                <input type="submit" name="alldel" value="※掲示板リセット※" onClick="return check('掲示板がリセットされます．本当によろしいですか？\n※元には戻せません．')">
             </form>
             
             <div id="twitter">
@@ -149,6 +152,8 @@
               <input type="submit">
             </form>
         </section>
+            
+        <hr />
         
         <section>
             <h2>学生出席確認検索</h2>
@@ -197,7 +202,21 @@
             <input type="password" name="pass" required>
             <input type="submit">
             </form>
-         </section>   
+        </section>
+        
+        <section id="update">
+                <h2>更新情報</h2>
+                <ul>
+                <li><time>2015.6.8</time>　管理者ページで掲示板のリセットが出来るようになりました．</li>
+                <li><time>2015.6.8</time>　予定の削除ができるようになりました．今後の予定ボタンから行えます．</li>
+                <li><time>2015.6.8</time>　更新情報の掲載を開始しました．</li>
+                
+                
+                
+                
+                
+                </ul>
+        </section>
             
             
             </div>

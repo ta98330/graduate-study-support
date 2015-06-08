@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="base.css">
         
         <script src="location.js"></script>
-        
+        <script src="attendance01.js"></script>
         <title>卒検支援</title>
     </head>
     <body>
