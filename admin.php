@@ -39,22 +39,26 @@ if(!empty($_POST['id'])){
         
         $now_year = $yy; //現在の年を取得
         $now_month = $mm; //現在の月を取得
-        $now_day = date("j"); //現在の日を取得
+        $now_day = date("d"); //現在の日を取得
         $countdate = date("t"); //今月の日数を取得
         $weekday = array("日","月","火","水","木","金","土"); //曜日の配列作成
 
         //見出し部分出力
         echo "<div>".$now_year.'年'.$now_month."月</div>\n";
+        
+        
 
         //一覧表示
         for( $day=1; $day <= $countdate; $day++ ){ //今月の日数分ループする
+            $date0 = sprintf("%02d", $day);
+            $st = $pdo->query("SELECT * FROM user_logs WHERE id = {$_POST['id']} AND DATE_FORMAT(date,'%Y-%m-%d') = '{$_POST['period']}-$date0'");//SQL文の発行
             
-            $st = $pdo->query("SELECT * FROM user_logs WHERE id = {$_POST['id']} AND DATE_FORMAT(date,'%Y-%m-%d') = '{$_POST['period']}-$day'");//SQL文の発行
-
+            
         while ($row = $st->fetch()) {
                 $start_time = htmlspecialchars($row['start_time']);
                 $end_time = htmlspecialchars($row['end_time']);
                 $stay_time = htmlspecialchars($row['stay_time']);
+            
         }
             
             
