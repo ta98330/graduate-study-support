@@ -1,1 +1,1 @@
-# graduate-study-support
+# 情報物理研究室2015　卒検支援ページ

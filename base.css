@@ -1,0 +1,614 @@
+body{
+    width: 96vw;
+    background-color:beige;					/* ページ全体の背景色 */
+}
+#pagebody{
+    width: 99%;
+    max-width: 1200px;
+    background-color: #FFFAFA;					/*内容全体の背景色*/
+    margin: 0 auto;
+    /*text-align:center;							/* テキストをセンター揃え */
+}
+
+/*==================================
+卒検ロゴ
+====================================*/
+#rogo {
+    z-index: 3;
+    position: absolute;
+    position: fixed;
+    top: -50px;
+    left: -50px;
+  
+    
+    
+}
+
+#rogo .sotukenrogo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  
+    
+    
+}
+
+#rogo #test01 {
+    background: none;
+        -webkit-animation: spin 20.5s linear infinite;
+        -moz-animation: spin 20.5s linear infinite;
+        -ms-animation: spin 20.5s linear infinite;
+        -o-animation: spin 20.5s linear infinite;
+        animation: spin 20.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+	0% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin {
+	0% {-moz-transform: rotate(0deg);}
+	100% {-moz-transform: rotate(360deg);}
+}
+@-ms-keyframes spin {
+	0% {-ms-transform: rotate(0deg);}
+	100% {-ms-transform: rotate(360deg);}
+}
+@-o-keyframes spin {
+	0% {-o-transform: rotate(0deg);}
+	100% {-o-transform: rotate(360deg);}
+}
+@keyframes spin {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+#rogo #test02 {
+    background: none;
+        -webkit-animation: spin1 100.5s linear infinite;
+        -moz-animation: spin1 100.5s linear infinite;
+        -ms-animation: spin1 100.5s linear infinite;
+        -o-animation: spin1 100.5s linear infinite;
+        animation: spin1 100.5s linear infinite;
+}
+
+
+@-webkit-keyframes spin1 {
+	0% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin1 {
+	0% {-moz-transform: rotate(0deg);}
+	100% {-moz-transform: rotate(360deg);}
+}
+@-ms-keyframes spin1 {
+	0% {-ms-transform: rotate(0deg);}
+	100% {-ms-transform: rotate(360deg);}
+}
+@-o-keyframes spin1 {
+	0% {-o-transform: rotate(0deg);}
+	100% {-o-transform: rotate(360deg);}
+}
+@keyframes spin1 {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+    
+    
+
+
+
+
+/*==================================
+すべての表
+====================================*/
+table {
+    margin: 0 auto;
+    text-align:center;							/* テキストをセンター揃え */
+    
+}
+
+/*==================================
+main
+====================================*/
+#main h2 {
+    margin: 2px;
+    
+}
+#main section {
+    
+   margin: 5px; 
+    
+}
+
+#main #right_contents {
+    float: right;
+    width: 50%;
+    
+}
+
+#main #left_contents {
+    float: left;
+    width: 50%
+    
+}
+
+
+
+
+/*==================================
+通過ページ
+====================================*/
+#passage {
+    margin:0 auto;				                 /*内容全体をセンタリング*/
+    text-align: center;
+    
+}
+
+/*==================================
+ヘッダ
+====================================*/
+header {
+	width: 100%; height: 60px;					/* ヘッダ部分の幅と高さ */
+	margin: 0px;							/* 上下マージン0px  */
+    padding: 0px;
+	background-color:indianred;					/* 背景色 */
+	}
+header h1 {
+	font-size: 150%;							/* フォントのサイズ */
+	font-family: Arial, Helvetica, sans-serif;	/* フォントの種類 */
+    width: 50%;
+    padding-left: 20%;
+    float: left;
+	}
+header h1 a {
+	text-decoration:none;						/* リンクの下線を無くす */
+	/*background-color:#333333;					/* 背景色 */
+	color:#000066;								/* 文字色 */
+	
+    /*display:block;								/* リンク部分をブロック表示 */
+    padding:5px;				/* 見出しの位置調節(上右下左) */
+    margin: 0px;
+    
+	}
+
+	
+header h2 {
+	/*padding:0px 0px 0px 0px;					/* 見出しの位置調節 */
+    margin: 35px 0px 0px 0px;                   /* 見出しの位置調節 */
+    float: right;
+	font-size: 100%;							/* フォントのサイズ */
+	font-family: Arial, Helvetica, sans-serif;	/* フォントの種類 */
+    width: 20%;
+    
+    
+	}
+header h2 a {
+	text-decoration:none;						/* リンクの下線を無くす */
+	/*background-color:#99FFCC;					/* 背景色 */
+	color:#000066;								/* 文字色 */
+	
+	/*display:block;								/* リンク部分をブロック表示 */
+	
+	/*padding: 1px 1px 1px 800px;					/* 上パディング */
+	}
+
+/*==================================
+在室状況
+====================================*/
+#now{
+    
+    
+}
+
+#now h2 {
+    margin: 3px;
+    
+}
+
+
+
+
+
+/*==================================
+本日の予定
+====================================*/
+#today{
+    margin:0 auto;				                 /*内容全体をセンタリング*/
+    text-align: center;
+       
+}
+
+#today h2{
+    margin-bottom: 3px;
+}
+
+#today marquee {
+    width: 70%;
+    background-color: black;
+    color: floralwhite;
+    
+    
+}
+
+
+
+/*==================================
+現在の在室状況
+====================================*/
+
+#now {
+    text-align:center;							/* テキストをセンター揃え */
+}
+
+
+#member ul{
+    width: 100%;
+    margin: 0 auto;
+}
+#member ul li{
+    float: left;
+    list-style-type:none;						/* リストマーカー無しにする */
+	text-decoration:none;						/* リンクの下線を無くす */
+    text-align:center;							/* テキストをセンター揃え */
+}
+
+#member name {
+    position: relative;
+    top: 0px;
+    left: -30px;
+}
+
+.situ {
+ position: relative;
+ top: 0px;
+ left: -60px;
+}
+
+/*----------自動ログインモード----------*/
+
+#autologin {
+    width: 100px;
+    height: 100px;
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+#reload {//更新ボタン
+    
+}
+
+/*==================================
+ユーザーバー
+====================================*/
+#user {
+    width: 100%;
+    background-color:aqua;
+    
+}
+
+#user a {
+    text-decoration:none;						/* リンクの下線を無くす */
+    float: right;
+    padding-right: 5px;
+}
+
+
+/*==================================
+google カレンダー
+====================================*/
+#calendar {
+    
+    
+    
+    
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+   
+    
+}
+
+
+
+
+
+
+/*==================================
+簡易掲示板
+====================================*/
+#bbs {
+    
+    
+}
+
+#bbs ul {
+    background-color: #228B22;					/*背景色*/
+    color: #FFFFFF;
+    padding: 5px;
+    height: 30em;
+    border: solid black;
+    font-size: 85%;
+    overflow: auto;
+    
+}
+
+#bbs ul li {
+    list-style-type:none;						/* リストマーカー無しにする */
+    
+    
+}
+
+
+textarea {/*bbs内容*/
+    width: 70%;
+    height: 3em;
+}
+
+/*==================================
+twitter
+====================================*/
+#twitter {
+    
+    
+}
+
+
+
+
+/*==================================
+個人予定
+====================================*/
+#personal_schedule {
+    
+    
+    
+    
+    
+}
+
+#personal_schedule li{
+    list-style-type: none;
+    
+    
+    
+    
+}
+
+.todaystasks {
+    margin-bottom: 5%;
+    font-weight: 700;
+    font-size: 170%;
+    color: crimson;
+    
+    
+    
+}
+
+.tommorowstasks {
+    margin-bottom: 3%;
+    font-weight: 600;
+    font-size: 130%;
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+/*==================================
+全体予定登録
+====================================*/
+#memtask {
+    
+    
+    
+}
+
+#memtask h2 {
+    color: red;
+    
+    
+}
+
+
+
+
+/*==================================
+個人予定登録
+====================================*/
+#pertask {
+    
+    
+}
+
+#pertask h2 {
+    color: blue;
+    
+}
+
+
+
+/*==================================
+登下校登録
+====================================*/
+#registration {
+    
+}
+
+
+
+#registration input {
+    width: 110px;
+    height: 110px;
+    font-size: 150%;
+    line-height: 140%;
+    margin: 5px;
+    padding-top: 5px;
+    color: floralwhite;
+    border-style: none;
+
+    box-shadow: 2px 2px 3px 1px #666;
+    -moz-box-shadow: 2px 2px 3px 1px #666;
+    -webkit-box-shadow: 2px 2px 3px 1px #666;
+    
+    text-shadow: 1px 1px 2px #000;
+    
+    /* 角丸の指定 */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    
+    
+
+
+}
+
+#registration input[disabled] {
+    background-color: dimgray;
+    color: darkgray;
+    
+}
+
+#toukou{
+    background-color: crimson;
+    
+}
+
+#toukou:hover{
+    background-color: red;
+    
+}
+
+#gekou{
+    background-color: cornflowerblue;
+    
+}
+
+#gekou:hover{
+    background-color: deepskyblue;
+    
+}
+
+#regekou{
+    font-size: 120%;
+    background-color: gold;
+    
+}
+
+#regekou:hover{
+    background-color: khaki;
+    
+}
+
+#joukyou select{
+    width: 110px;
+    font-size: 150%;
+    
+    
+}
+
+#joukyou input{
+    background-color: lime;
+    
+    
+}
+
+#joukyou input:hover{
+    background-color: greenyellow;
+    
+    
+}
+
+
+
+
+hr {
+	clear: both;								/* フロート配置をクリア */
+	width: 100%;								/* 幅の指定 */
+	margin: 10px 0px;							/* マージン */
+	border: 1px dotted #CCCCCC;					/* 内容の区切りを点線に */
+	}
+    
+
+
+
+
+
+
+
+/*==================================
+フッター
+====================================*/
+#footer {
+    background-color: indianred;
+    
+}
+
+
+
+/*==================================
+
+
+
+個別ページ
+
+
+====================================*/
+
+/*==================================
+admin
+====================================*/
+#admin {
+    
+    
+    
+    
+    
+    
+    
+}
+
+#admin table{
+    width: 60%;
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
