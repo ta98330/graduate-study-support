@@ -4,8 +4,8 @@
         <div id="rogo">
             <!--<img src=http://buturi.heteml.jp/student/2015/kanani.gif width=200 height=200>-->
             <a href="index.php">
-            <img class="sotukenrogo" id="test01" src=http://buturi.heteml.jp/student/2015/maruani.gif width=200 height=200>
-            <img class="sotukenrogo" id="test02" src=http://buturi.heteml.jp/student/2015/myoukou.gif width=200 height=200>
+            <img class="sotukenrogo" id="test01" src=images/maruani.gif width=200 height=200>
+            <img class="sotukenrogo" id="test02" src=images/myoukou.gif width=200 height=200>
             </a>
         
         
@@ -142,7 +142,7 @@
                     
                     /*echo "<img src=http://buturi.heteml.jp/student/2015/$situation.gif class='situ' width=60 height=60 alt='$situation'>";*/
                     echo "</form>";
-                    echo "<a href='http://buturi.heteml.jp/student/2015/$lnRuby/'><name>$name</name></a></li>";
+                    echo "<a href='images/$lnRuby/'><name>$name</name></a></li>";
                     
                     
                 
