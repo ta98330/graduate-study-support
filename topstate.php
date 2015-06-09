@@ -109,8 +109,11 @@
             </div>   
             
             <hr /><!--float解除-->
+            <a id="link" href="http://buturi.heteml.jp/student/2015/misawa/test/attendance/index.php">卒検支援ページ</a>
             
         </section>
+        
+        
     </div>
     </body>
 </html>

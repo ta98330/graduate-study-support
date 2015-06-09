@@ -129,7 +129,7 @@
                     
                     
                    //画像リンク先各ホームページモード                   
-                    /*echo "<li><a href='http://buturi.heteml.jp/student/2015/$lnRuby/'><img src=http://buturi.heteml.jp/student/2015/images/profile/$lnRuby.jpg width=100 height=100 alt='No image'><img src=http://buturi.heteml.jp/student/2015/$situation.gif class='situ' width=60 height=60 alt='$situation'><br /><name>$name</name></a></li>";*/
+                    /*echo "<li><a href='http://buturi.heteml.jp/student/2015/$lnRuby/'><img src=http://buturi.heteml.jp/student/2015/images/profile/$lnRuby.jpg width=100 height=100 alt='No image'><img src=images/$situation.gif class='situ' width=60 height=60 alt='$situation'><br /><name>$name</name></a></li>";*/
                     
                     
                     
@@ -138,9 +138,9 @@
                     echo "<input type='hidden' name='id' value='$id'>";
                     echo "<input type='hidden' name='pass' value='$pass'>";
                     echo "<input type='image' src='http://buturi.heteml.jp/student/2015/images/profile/$lnRuby.jpg' id='autologin'>";
-                    echo "<input type='image' src=http://buturi.heteml.jp/student/2015/$situation.gif class='situ' width=60 height=60 alt='$situation'>";
+                    echo "<input type='image' src=images/$situation.gif class='situ' width=60 height=60 alt='$situation'>";
                     
-                    /*echo "<img src=http://buturi.heteml.jp/student/2015/$situation.gif class='situ' width=60 height=60 alt='$situation'>";*/
+                    
                     echo "</form>";
                     echo "<a href='images/$lnRuby/'><name>$name</name></a></li>";
                     
