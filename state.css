@@ -101,6 +101,7 @@
 すべての表
 ====================================*/
 #today table {
+    color: darkgreen;
     background-color: lemonchiffon;
     margin: 0 auto;
     text-align:center;							/* テキストをセンター揃え */
