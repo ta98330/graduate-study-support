@@ -4,15 +4,17 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" href="state.css">
         <title>卒検支援</title>
     </head>
     <body>
     <div id="pagebody">
         
         <div id="rogo">
+            <a href="index.php" target="_blank">
             <img class="sotukenrogo" id="test01" src=http://buturi.heteml.jp/student/2015/maruani.gif width=200 height=200>
             <img class="sotukenrogo" id="test02" src=http://buturi.heteml.jp/student/2015/myoukou.gif width=200 height=200>
+            </a>
         </div>
         
         <section id="today">
@@ -21,10 +23,8 @@
             $taskNo = 0;//予定件数
 
             $pdo = new PDO("mysql:dbname={$_SESSION['dbname']}", "{$_SESSION['dbusername']}", "{$_SESSION['dbpass']}");
-            //if(empty($_SESSION['userId']))
                 $st = $pdo->query("SELECT * FROM task WHERE id IS NULL");//SQL文の発行
-            /*else
-                $st = $pdo->query("SELECT * FROM task WHERE id IS NULL OR id = {$_SESSION['userId']}");//SQL文の発行*/
+            
             while ($row = $st->fetch()) {
                 $date = htmlspecialchars($row['date']);
                 if($date == $today){
@@ -102,7 +102,7 @@
                     $lnRuby = htmlspecialchars($row['lnRuby']);
                     $situation = htmlspecialchars($row['situation']);
               
-                    echo "<li><a href='http://buturi.heteml.jp/student/2015/$lnRuby/'><img src=http://buturi.heteml.jp/student/2015/images/profile/$lnRuby.jpg width=100 height=100 alt='No image'><img src=http://buturi.heteml.jp/student/2015/$situation.gif class='situ' width=60 height=60 alt='$situation'><br /><name>$name</name></a></li>";
+                    echo "<li><a href='http://buturi.heteml.jp/student/2015/$lnRuby/' target='_blank'><img src=http://buturi.heteml.jp/student/2015/images/profile/$lnRuby.jpg class=' profile' width=100 height=100 alt='No image'><img src=http://buturi.heteml.jp/student/2015/$situation.gif class='situ' width=60 height=60 alt='$situation'><br /><name>$name</name></a></li>";
                 }
                 ?>
                 </ul>

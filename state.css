@@ -1,0 +1,209 @@
+
+#pagebody{
+    width: 100%;
+    max-width: 1200px;
+    background-color: #2F4F4F;  					/*内容全体の背景色*/
+    margin: 0 auto;
+    /*text-align:center;							/* テキストをセンター揃え */
+    border: solid #2F4F4F;
+    border-width: 1px 10px 10px 40px;
+}
+
+/*==================================
+卒検ロゴ
+====================================*/
+#rogo {
+    z-index: 3;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+  
+    
+    
+}
+
+#rogo .sotukenrogo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  
+    
+    
+}
+
+#rogo #test01 {
+    background: none;
+        -webkit-animation: spin 20.5s linear infinite;
+        -moz-animation: spin 20.5s linear infinite;
+        -ms-animation: spin 20.5s linear infinite;
+        -o-animation: spin 20.5s linear infinite;
+        animation: spin 20.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+	0% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin {
+	0% {-moz-transform: rotate(0deg);}
+	100% {-moz-transform: rotate(360deg);}
+}
+@-ms-keyframes spin {
+	0% {-ms-transform: rotate(0deg);}
+	100% {-ms-transform: rotate(360deg);}
+}
+@-o-keyframes spin {
+	0% {-o-transform: rotate(0deg);}
+	100% {-o-transform: rotate(360deg);}
+}
+@keyframes spin {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+#rogo #test02 {
+    background: none;
+        -webkit-animation: spin1 100.5s linear infinite;
+        -moz-animation: spin1 100.5s linear infinite;
+        -ms-animation: spin1 100.5s linear infinite;
+        -o-animation: spin1 100.5s linear infinite;
+        animation: spin1 100.5s linear infinite;
+}
+
+
+@-webkit-keyframes spin1 {
+	0% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin1 {
+	0% {-moz-transform: rotate(0deg);}
+	100% {-moz-transform: rotate(360deg);}
+}
+@-ms-keyframes spin1 {
+	0% {-ms-transform: rotate(0deg);}
+	100% {-ms-transform: rotate(360deg);}
+}
+@-o-keyframes spin1 {
+	0% {-o-transform: rotate(0deg);}
+	100% {-o-transform: rotate(360deg);}
+}
+@keyframes spin1 {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+    
+    
+
+
+
+
+/*==================================
+すべての表
+====================================*/
+#today table {
+    background-color: lemonchiffon;
+    margin: 0 auto;
+    text-align:center;							/* テキストをセンター揃え */
+    
+}
+
+/*==================================
+在室状況
+====================================*/
+#now{
+    background-color: cadetblue;
+    text-align:center;							/* テキストをセンター揃え */
+    
+    
+}
+
+#now h2 {
+    margin: 3px;
+    
+}
+
+
+#member ul{
+    width: 100%;
+    margin: 0 auto;
+}
+#member ul li{
+    float: left;
+    list-style-type:none;						/* リストマーカー無しにする */
+	text-decoration:none;						/* リンクの下線を無くす */
+    text-align:center;							/* テキストをセンター揃え */
+}
+
+#member name {
+    position: relative;
+    top: 0px;
+    left: -30px;
+}
+
+.situ {
+ position: relative;
+ top: 0px;
+ left: -60px;
+}
+
+
+
+/*==================================
+本日の予定
+====================================*/
+#today{
+    color: floralwhite;
+    margin:0 auto;				                 /*内容全体をセンタリング*/
+    text-align: center;
+    
+}
+
+#today h2{
+    margin-bottom: 3px;
+}
+
+#today marquee {
+    width: 70%;
+    background-color: black;
+    color: floralwhite;
+    
+    
+}
+
+
+    
+/*==================================
+区切り
+====================================*/
+
+hr {
+	clear: both;								/* フロート配置をクリア */
+	
+	border: none;					/* 内容の区切りを点線に */
+	}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
