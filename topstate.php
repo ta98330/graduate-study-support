@@ -109,7 +109,7 @@
             </div>   
             
             <hr /><!--float解除-->
-            <a id="link" href="http://buturi.heteml.jp/student/2015/misawa/test/attendance/index.php">卒検支援ページ</a>
+            <a id="link" href="http://buturi.heteml.jp/student/2015/misawa/test/attendance/index.php" target="_top">卒検支援ページ</a>
             
         </section>
         
