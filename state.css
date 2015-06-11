@@ -2,10 +2,10 @@
 #pagebody{
     width: 100%;
     max-width: 1200px;
-    background-color: #2F4F4F;  					/*内容全体の背景色*/
+    background-color: deepskyblue;  					/*内容全体の背景色*/
     margin: 0 auto;
     /*text-align:center;							/* テキストをセンター揃え */
-    border: solid #2F4F4F;
+    border: solid deepskyblue;
     border-width: 1px 10px 10px 40px;
 }
 
@@ -112,7 +112,7 @@
 在室状況
 ====================================*/
 #now{
-    background-color: cadetblue;
+    //background-color: lightblue;
     text-align:center;							/* テキストをセンター揃え */
     
     
