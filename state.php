@@ -142,7 +142,7 @@
                     
                     
                     echo "</form>";
-                    echo "<a href='images/$lnRuby/'><name>$name</name></a></li>";
+                    echo "<a href='http://buturi.heteml.jp/student/2015/$lnRuby/'><name>$name</name></a></li>";
                     
                     
                 
