@@ -10,13 +10,6 @@
     <body>
     <div id="pagebody">
         
-        <div id="rogo">
-            <a href="index.php" target="_blank">
-            <img class="sotukenrogo" id="test01" src=images/maruani.gif width=200 height=200>
-            <img class="sotukenrogo" id="test02" src=images/myoukou.gif width=200 height=200>
-            </a>
-        </div>
-        
         <section id="today">
             <?php
             $today = date("Y-m-d");//本日の日付取得
@@ -37,15 +30,15 @@
             echo "<h2><time>",date('n月 j日 (D)'),"</time> 本日の予定（$taskNo 件）</h2>";
 
             if($taskNo == 0){
-                echo "<MARQUEE>本日の予定はありません.</MARQUEE>";
+                echo "<p>本日の予定はありません.</p>";
             }
             else{
-                echo "<MARQUEE>";
+                echo "<table><tr><th>件数</th><th>時間</th><th>場所</th><th>内容</th></tr>";
                 for($i = 0; $i < $taskNo; $i++){
                     $n = $i+1;
-                    echo "$n 件目&emsp; $time[$i]&emsp; $place[$i]&emsp; $content[$i]&emsp;&emsp;&emsp;&emsp;";
+                    echo "<tr><td>$n 件目</td><td>$time[$i]</td><td>$place[$i]</td><td>$content[$i]<br />";
                 }
-                echo "</MARQUEE>";
+                echo "</table>";
             }            
             ?>
             
