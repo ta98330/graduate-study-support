@@ -4,6 +4,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <meta name="robots" content="noindex">
         <link rel="stylesheet" href="state.css">
         <title>卒検支援</title>
     </head>
