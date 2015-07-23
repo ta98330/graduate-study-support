@@ -135,7 +135,7 @@
     text-align:center;							/* テキストをセンター揃え */
 }
 
-#member name {
+#member span {
     position: relative;
     top: 0px;
     left: -30px;
