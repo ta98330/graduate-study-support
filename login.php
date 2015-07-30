@@ -8,9 +8,9 @@ $_SESSION['userPass'] = NULL;
 $_SESSION['login'] = "ログインしていません．";
 
 
-    $pdo = new PDO("mysql:dbname={$_SESSION['dbname']}", "{$_SESSION['dbusername']}", "{$_SESSION['dbpass']}");
+    $pdo = new PDO("mysql:dbname={$_SESSION['dbname']}", "{$_SESSION['dbusername']}", "{$_SESSION['dbpass']}");//MySQLへの接続
     $st = $pdo->prepare("SELECT * FROM member WHERE id = ? AND pass = ?");//SQL文の発行
-    $st->execute(array($_POST['id'], $_POST['pass']));
+    $st->execute(array($_POST['id'], $_POST['pass']));//SQL文の実行
         
     while ($row = $st->fetch()) {
         $id = htmlspecialchars($row['id']);
