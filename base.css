@@ -1,9 +1,12 @@
 body{
-    width: 96vw;
+    width: 100%;
     background-color:beige;					/* ページ全体の背景色 */
 }
 #pagebody{
-    width: 99%;
+    position: absolute;
+    //display: block;
+    //margin: 0 auto;
+    width: 98%;
     max-width: 1200px;
     background-color: #FFFAFA;					/*内容全体の背景色*/
     margin: 0 auto;
@@ -15,22 +18,27 @@ body{
 ====================================*/
 #rogo {
     z-index: 3;
-    position: absolute;
     position: fixed;
-    top: -50px;
-    left: -50px;
-  
+    top: 0px;
+    left: 0px;
+    //overflow: hidden;
     
     
 }
 
-#rogo .sotukenrogo{
+.sotukenrogo{
     position: absolute;
-    top: 0px;
-    left: 0px;
-  
+    top: -7vw;
+    left: -7vw;
     
     
+}
+
+#test01,#test02 {
+    width: 22vw;
+    //max-width: 200px;
+    height: 22vw;
+    //max-height: 200px;
 }
 
 #rogo #test01 {

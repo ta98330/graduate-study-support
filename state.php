@@ -4,14 +4,9 @@
         <div id="rogo">
             <!--<img src=http://buturi.heteml.jp/student/2015/kanani.gif width=200 height=200>-->
             <a href="index.php">
-            <img class="sotukenrogo" id="test01" src=images/maruani.gif width=200 height=200>
-            <img class="sotukenrogo" id="test02" src=images/myoukou.gif width=200 height=200>
+            <img class="sotukenrogo" id="test01" src=images/maruani.gif>
+            <img class="sotukenrogo" id="test02" src=images/myoukou.gif>
             </a>
-        
-        
-        
-        
-        
         </div>
         
         <section id="today">
