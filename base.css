@@ -1,45 +1,45 @@
 body{
     width: 100%;
-    background-color:beige;					/* ページ全体の背景色 */
+    background-color:beige;
 }
 #pagebody{
-    position: absolute;
-    //display: block;
-    //margin: 0 auto;
+    position: relative;
+    margin: 0 auto;
     width: 98%;
     max-width: 1200px;
-    background-color: #FFFAFA;					/*内容全体の背景色*/
-    margin: 0 auto;
-    /*text-align:center;							/* テキストをセンター揃え */
+    background-color: #FFFAFA;
+    
 }
 
 /*==================================
 卒検ロゴ
 ====================================*/
 #rogo {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
     z-index: 3;
-    position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     //overflow: hidden;
     
     
 }
 
+
 .sotukenrogo{
-    position: absolute;
+    position: fixed;
+    
     top: -7vw;
     left: -7vw;
+     width: 22vw;
+    //max-width: 200px;
+    height: 22vw;
+    //max-height: 200px;
     
     
 }
 
-#test01,#test02 {
-    width: 22vw;
-    //max-width: 200px;
-    height: 22vw;
-    //max-height: 200px;
-}
 
 #rogo #test01 {
     background: none;
@@ -112,7 +112,7 @@ body{
 ====================================*/
 table {
     margin: 0 auto;
-    text-align:center;							/* テキストをセンター揃え */
+    text-align:center;
     
 }
 
@@ -157,49 +157,31 @@ main
 ヘッダ
 ====================================*/
 header {
-	width: 100%; height: 60px;					/* ヘッダ部分の幅と高さ */
-	margin: 0px;							/* 上下マージン0px  */
-    padding: 0px;
-	background-color:indianred;					/* 背景色 */
-	}
-header h1 {
-	font-size: 150%;							/* フォントのサイズ */
-	font-family: Arial, Helvetica, sans-serif;	/* フォントの種類 */
-    width: 50%;
-    padding-left: 20%;
-    float: left;
-	}
-header h1 a {
-	text-decoration:none;						/* リンクの下線を無くす */
-	/*background-color:#333333;					/* 背景色 */
-	color:#000066;								/* 文字色 */
-	
-    /*display:block;								/* リンク部分をブロック表示 */
-    padding:5px;				/* 見出しの位置調節(上右下左) */
-    margin: 0px;
-    
+	width: 100%; height: 50px;
+	background-color:rgba(19, 62, 49, 0.84);
+    color: azure;
 	}
 
-	
-header h2 {
-	/*padding:0px 0px 0px 0px;					/* 見出しの位置調節 */
-    margin: 35px 0px 0px 0px;                   /* 見出しの位置調節 */
-    float: right;
-	font-size: 100%;							/* フォントのサイズ */
-	font-family: Arial, Helvetica, sans-serif;	/* フォントの種類 */
-    width: 20%;
-    
-    
+header h1 {
+    position: absolute;
+    display: inline-block;
+	font-size:30px;
+    max
+    line-height: 50px;
+    //width: 50%;
+    padding-left: 15vw;
+    //float: left;
 	}
-header h2 a {
-	text-decoration:none;						/* リンクの下線を無くす */
-	/*background-color:#99FFCC;					/* 背景色 */
-	color:#000066;								/* 文字色 */
-	
-	/*display:block;								/* リンク部分をブロック表示 */
-	
-	/*padding: 1px 1px 1px 800px;					/* 上パディング */
+
+header a {
+	text-decoration:none;
+	color: azure;
 	}
+
+header a:first-child:hover {
+	color: #63fcf0;
+	}
+
 
 /*==================================
 在室状況
@@ -246,31 +228,39 @@ header h2 a {
 ====================================*/
 
 #now {
-    text-align:center;							/* テキストをセンター揃え */
+    text-align:center;
 }
 
 
 #member ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
     width: 100%;
     margin: 0 auto;
 }
 #member ul li{
-    float: left;
-    list-style-type:none;						/* リストマーカー無しにする */
-	text-decoration:none;						/* リンクの下線を無くす */
-    text-align:center;							/* テキストをセンター揃え */
+    position: relative;
+    list-style-type:none;
+    text-align:center;
+}
+
+#member ul li a{
+	text-decoration:none;
 }
 
 #member span {
     position: relative;
     top: 0px;
-    left: -30px;
+    //left: -30px;
 }
 
 .situ {
- position: relative;
- top: 0px;
- left: -60px;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    z-index: 3;
 }
 
 /*----------自動ログインモード----------*/

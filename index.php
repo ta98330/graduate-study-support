@@ -15,7 +15,7 @@
         
         <form class="form" name="iform" action="login.php" method="post">
           ID<br><input type="number" name="id" required><br>
-          パスワード<br><input type="password" name="pass" required><br> yu-
+          パスワード<br><input type="password" name="pass" required><br>
           <input type="submit" value="ログイン">
         </form>
             

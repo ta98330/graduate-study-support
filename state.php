@@ -2,10 +2,9 @@
 <?php //require "header.php";//ヘッダー読み込み ※通常時は必ずコメントアウト！開発時のみ ?>
 
         <div id="rogo">
-            <!--<img src=http://buturi.heteml.jp/student/2015/kanani.gif width=200 height=200>-->
             <a href="index.php">
-            <img class="sotukenrogo" id="test01" src=images/maruani.gif>
-            <img class="sotukenrogo" id="test02" src=images/myoukou.gif>
+                <img class="sotukenrogo" id="test01" src=images/maruani.gif>
+                <img class="sotukenrogo" id="test02" src=images/myoukou.gif>
             </a>
         </div>
         
@@ -28,7 +27,40 @@
                 $taskNo++;
                 }
             }
-            echo "<h2><time>",date('n月 j日 (D)'),"</time> 本日の予定（$taskNo 件）</h2>";
+
+            $nowweek = date("w");
+
+            switch ($nowweek){
+                case '0';
+                    $weekja = "日";
+                    break;
+                case '1';
+                    $weekja = "月";
+                    break;
+                case '2';
+                    $weekja = "火";
+                    break;
+                case '3';
+                    $weekja = "水";
+                    break;
+                case '4';
+                    $weekja = "木";
+                    break;
+                case '5';
+                    $weekja = "金";
+                    break;
+                case '6';
+                    $weekja = "土";
+                    break;
+            }
+
+
+
+
+
+
+
+            echo "<h2><time>",date('n月 j日'),"($weekja)","</time> 本日の予定（$taskNo 件）</h2>";
 
             if($taskNo == 0){
                 echo "<MARQUEE>本日の予定はありません.</MARQUEE>";
@@ -147,14 +179,7 @@
                 ?>
                 </ul>
                 
-            </div>   
-            
-            
-            <hr /><!--float解除-->
-            
-            <form>
-            <input id="reload" type=button value="更新" onclick=location.reload()>
-            </form>
+            </div>
         </section>
        
         
