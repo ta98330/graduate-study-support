@@ -119,26 +119,28 @@ table {
 /*==================================
 main
 ====================================*/
+#main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
 #main h2 {
     margin: 2px;
     
 }
 #main section {
     
-   margin: 5px; 
+   margin: 5px;
     
 }
 
-#main #right_contents {
-    float: right;
-    width: 50%;
-    
+#main section {
+    flex: 1;
 }
 
-#main #left_contents {
-    float: left;
-    width: 50%
-    
+#main #personal_schedule {
+    flex: 9;
 }
 
 
@@ -293,11 +295,104 @@ header a:first-child:hover {
 }
 
 #user a {
-    text-decoration:none;						/* リンクの下線を無くす */
+    text-decoration:none;
     float: right;
     padding-right: 5px;
 }
 
+/*==================================
+登下校登録
+====================================*/
+#registration {
+    
+}
+
+#registration form {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+#registration input {
+    width: 110px;
+    height: 110px;
+    
+    margin: 10px;
+    
+    font-size: 140%;
+    //line-height: 140%;
+    color: floralwhite;
+    border-style: none;
+
+    box-shadow: 2px 2px 3px 1px #666;
+    -moz-box-shadow: 2px 2px 3px 1px #666;
+    -webkit-box-shadow: 2px 2px 3px 1px #666;
+    
+    text-shadow: 1px 1px 2px #000;
+    
+    
+    border-radius: 5px;
+    
+    
+
+
+}
+
+#registration input[disabled] {
+    background-color: dimgray;
+    color: darkgray;
+    
+}
+
+#toukou{
+    background-color: crimson;
+    
+}
+
+#toukou:hover{
+    background-color: red;
+    
+}
+
+#gekou{
+    background-color: cornflowerblue;
+    
+}
+
+#gekou:hover{
+    background-color: deepskyblue;
+    
+}
+
+#regekou{
+    font-size: 120%;
+    background-color: gold;
+    
+}
+
+#regekou:hover{
+    background-color: khaki;
+    
+}
+
+#joukyou select{
+    width: 110px;
+    font-size: 150%;
+    
+    
+}
+
+#joukyou input{
+    background-color: lime;
+    
+    
+}
+
+#joukyou input:hover{
+    background-color: greenyellow;
+    
+    
+}
 
 /*==================================
 google カレンダー
@@ -330,7 +425,7 @@ iframe {
 }
 
 #bbs ul {
-    background-color: #228B22;					/*背景色*/
+    background-color: #228B22;
     color: #FFFFFF;
     padding: 5px;
     height: 30em;
@@ -341,7 +436,7 @@ iframe {
 }
 
 #bbs ul li {
-    list-style-type:none;						/* リストマーカー無しにする */
+    list-style-type:none;
     
     
 }
@@ -414,7 +509,7 @@ twitter
 全体予定登録
 ====================================*/
 #memtask {
-    float: left;
+    
     
     
 }
@@ -432,7 +527,7 @@ twitter
 個人予定登録
 ====================================*/
 #pertask {
-    float: left;
+    
     
 }
 
@@ -454,105 +549,16 @@ twitter
 }
 
 
-/*==================================
-登下校登録
-====================================*/
-#registration {
-    
-}
 
-
-
-#registration input {
-    width: 110px;
-    height: 110px;
-    font-size: 150%;
-    line-height: 140%;
-    margin: 5px;
-    padding-top: 5px;
-    color: floralwhite;
-    border-style: none;
-
-    box-shadow: 2px 2px 3px 1px #666;
-    -moz-box-shadow: 2px 2px 3px 1px #666;
-    -webkit-box-shadow: 2px 2px 3px 1px #666;
-    
-    text-shadow: 1px 1px 2px #000;
-    
-    /* 角丸の指定 */
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    
-    
-
-
-}
-
-#registration input[disabled] {
-    background-color: dimgray;
-    color: darkgray;
-    
-}
-
-#toukou{
-    background-color: crimson;
-    
-}
-
-#toukou:hover{
-    background-color: red;
-    
-}
-
-#gekou{
-    background-color: cornflowerblue;
-    
-}
-
-#gekou:hover{
-    background-color: deepskyblue;
-    
-}
-
-#regekou{
-    font-size: 120%;
-    background-color: gold;
-    
-}
-
-#regekou:hover{
-    background-color: khaki;
-    
-}
-
-#joukyou select{
-    width: 110px;
-    font-size: 150%;
-    
-    
-}
-
-#joukyou input{
-    background-color: lime;
-    
-    
-}
-
-#joukyou input:hover{
-    background-color: greenyellow;
-    
-    
-}
 
 
 
 
 hr {
-	clear: both;								/* フロート配置をクリア */
-	width: 100%;								/* 幅の指定 */
-	margin: 10px 0px;							/* マージン */
-	border: 1px dotted #CCCCCC;					/* 内容の区切りを点線に */
+	//clear: both;
+	width: 100%;
+	margin: 10px 0px;
+	border: 1px dotted #CCCCCC;
 	}
     
 
@@ -605,7 +611,29 @@ admin
     
 }
 
+/*--------------タブレットのスタイル-----------------*/
+@media all and (max-width: 670px) {
+    
+    header a:first-child{
+        display: none;
+    }
+    
+    #twitter {
+        display: none;
+    }
+    
+    #main {
+        flex-direction: column;
+        
+    }
+    
+    #main section {
+        flex: 1;
+    }
+    
+    
 
+}
 
 
 

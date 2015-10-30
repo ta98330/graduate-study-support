@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial=1.0"><!--スマホ用-->
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css"><!--リセットcss-->
         
-        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="base.css">
         
         <script src="location.js"></script>
