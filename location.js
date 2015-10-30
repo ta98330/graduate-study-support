@@ -13,8 +13,8 @@ var options = {
 // 位置情報取得処理が成功した時にコールされる関数
 // 引数として、coords(coordinates。緯度・経度など)とtimestamp(タイムスタンプ)の2つを持ったpositionが渡される
 function successCallback(position){
-    // メッセージを表示
-    document.getElementById("message").innerHTML += "API成功<br />";
+    // メッセージを表示 ※非表示
+    //document.getElementById("message").innerHTML += "API成功<br />";
 
     // 引数positionからcoordinates(緯度・経度など)を取り出す
     // ただし、“★必ず取得できる”以外は中身が空っぽの可能性もある
@@ -48,6 +48,7 @@ function successCallback(position){
     var successDate = new Date(timestamp);
 
     // メッセージを表示
+    /*メッセージ非表示
     document.getElementById("message").innerHTML += "取得日時：" + successDate.toLocaleString() + "<br />";
     document.getElementById("message").innerHTML += "緯度：" + latitude + " 度<br />";
     document.getElementById("message").innerHTML += "経度：" + longitude + " 度<br />";
@@ -60,17 +61,17 @@ function successCallback(position){
     // 緯度・経度を地図上で確認するためにGoogleMapへのリンクを作成
     document.getElementById("message").innerHTML += "<a target='_blank' href='https://maps.google.co.jp/maps?q=" 
         + latitude + "," + longitude + "+%28%E7%8F%BE%E5%9C%A8%E4%BD%8D%E7%BD%AE%29&iwloc=A'>緯度・経度をGoogleMapで確認</a><br /><br />";
-    
+    */
     //登校確認
     //var confirmation;
     if((34.45 < latitude) && (latitude < 34.47) && (132.77 < longitude) && (longitude < 132.79)){
-        document.getElementById("message").innerHTML += "登校を確認しました．<br />";
+        document.getElementById("message").innerHTML += "登校を確認しました．<br />登校ボタンを押して登校登録をしてください．";
         
         document.getElementById("attend").innerHTML += "<input type='submit' value='登校' name='come' id='toukou'>";
         document.getElementById("attend").innerHTML += "<input type='submit' value='下校' name='out' id='gekou' disabled>";
     }
     else
-        document.getElementById("message").innerHTML += "登校が確認できませんでした．<br />";
+        document.getElementById("message").innerHTML += "登校が確認できませんでした．<br />位置情報が近畿大学工学部と異なります．";
         
         
         
@@ -131,7 +132,7 @@ function start(){
         navigator.geolocation.getCurrentPosition(successCallback, errorCallback , options);
         
         // メッセージを表示。↑は非同期処理なので、直ぐにメッセージが表示される
-        document.getElementById("message").innerHTML += "API実行<br />";
+        //document.getElementById("message").innerHTML += "API実行<br />";
         
     } else {
         // 対応していない → alertを表示するのみ

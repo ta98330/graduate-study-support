@@ -10,13 +10,14 @@
     require "state.php";//ヘッダー読み込み
 ?>
 
-    <section id="passage">
-        <h2>ログイン</h2>
-        
+    <section id="loginform">
+        <h2><i class="fa fa-sign-in"></i>ログイン</h2>
         <form class="form" name="iform" action="login.php" method="post">
-          ID<br><input type="number" name="id" required><br>
-          パスワード<br><input type="password" name="pass" required><br>
-          <input type="submit" value="ログイン">
+            <label>ID:</label>
+            <input type="number" name="id" required><br />
+            <label>パスワード:</label>
+            <input type="password" name="pass" required><br />
+            <input type="submit" value="ログイン">
         </form>
             
             

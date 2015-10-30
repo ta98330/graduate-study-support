@@ -15,14 +15,14 @@
 
         <div id="user">
           <?php
-          echo "<p>{$_SESSION['login']}{$_SESSION['userName']}さん　<a href='logout.php'>ログアウト</a></p>";
+          echo "<p>{$_SESSION['login']}{$_SESSION['userName']}さん　<a href='logout.php'><i class=\"fa fa-sign-out\"></i>ログアウト</a></p>";
           ?>
         </div>
         <div id="main">
 
             <section id="registration">
-                <h2>登下校登録</h2>
-                <button onclick="start()">位置情報取得</button>
+                <h2><i class="fa fa-pencil"></i>登下校登録</h2>
+                <button onclick="start()"><i class="fa fa-map-pin"></i>位置情報取得</button>
                 <div id='message'></div>
 
                 <?php
@@ -96,7 +96,7 @@
             </section>
             
             <section id="personal_schedule">
-                <h2>個人予定</h2>
+                <h2><i class="fa fa-calendar-check-o"></i>個人予定</h2>
                 <ul>
                 <?php
                 $today = date("Y-m-d");
@@ -127,7 +127,7 @@
 
             <!--予定レコードの追加-->
             <section id="memtask">
-                <h2>全体予定登録</h2>
+                <h2><i class="fa fa-calendar-plus-o"></i>全体予定登録</h2>
                 <form action="task_insert.php" method="post">
                   日付
                   <input type="date" name="date" pattern="\d{4}-?\d{2}-?\d{2}" min="2015-04-01" max="2016-03-31"><br><!--日付範囲制限-->
@@ -142,7 +142,7 @@
             </section>
 
             <section id="pertask">
-                <h2>個人予定登録</h2>
+                <h2><i class="fa fa-calendar-plus-o"></i>個人予定登録</h2>
                 <form action="task_insert.php" method="post">
                   <?php
                   echo "<input type='hidden' name='id' value='{$_SESSION['userId']}'>";
@@ -163,13 +163,13 @@
             
             
             <section id="calendar">
-
-            <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=jouhoubuturi2015%40gmail.com&amp;color=%231B887A&amp;src=5udlp7brhcnbuv0mq7t0jcmh04%40group.calendar.google.com&amp;color=%23AB8B00&amp;src=ja.japanese%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Asia%2FTokyo" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                <h2><i class="fa fa-calendar"></i>カレンダー</h2>
+                <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=jouhoubuturi2015%40gmail.com&amp;color=%231B887A&amp;src=5udlp7brhcnbuv0mq7t0jcmh04%40group.calendar.google.com&amp;color=%23AB8B00&amp;src=ja.japanese%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=Asia%2FTokyo" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
             </section><!--calendar-->
 
             <section id="bbs">
-                <h2>簡易掲示板</h2>
+                <h2><i class="fa fa-comments"></i>簡易掲示板</h2>
                 <ul>
                 <?php
                 $pdo = new PDO("mysql:dbname={$_SESSION['dbname']}", "{$_SESSION['dbusername']}", "{$_SESSION['dbpass']}");
@@ -201,25 +201,30 @@
 
 
             <section id="twitter">
-                <h1><i class="fa fa-twitter "></i>Twitter</h1>
+                <h2><i class="fa fa-twitter "></i>Twitter</h2>
                 <a class="twitter-timeline" href="https://twitter.com/j_b_2015" width="480px" height="430px" data-chrome="noheader nofooter transparent noscrollbar" data-widget-id="611469774460051457">@j_b_2015さんのツイート</a>
                 <script>
                     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
                 </script>
             </section>
-
-
-
-
-
-
             
-
-            
+            <section id="at_check">
+                <h2><i class="fa fa-check-square-o"></i>出席確認</h2>
+                <form action="admin.php" method="post">
+                    <label>期間</label>
+                    <?php
+                    echo "<input type='hidden' name='id' value=","{$_SESSION['userId']}",">";
+                    $now = date("Y-m");
+                    echo "<input name='period' type='month' min='2015-04' max='$now'>";
+                    ?>
+                    <br />
+                    <input type="submit">
+                </form>
+            </section>
 
 
             <section>
-                <h2>パスワード変更</h2>
+                <h2><i class="fa fa-cog"></i>パスワード変更</h2>
                 <form name="pass_insert" action="pass_update.php" method="post">
                 現在のパスワード
                 <input type="password" name="pass" required><br>
@@ -230,7 +235,7 @@
             </section>
 
             <section>
-                <h2>ユーザー情報確認</h2>
+                <h2><i class="fa fa-check-circle-o"></i>ユーザー情報確認</h2>
                 <form action="user_info.php" method="post">
                 パスワード
                 <input type="password" name="pass" required>
@@ -240,8 +245,9 @@
 
 
             <section id="update">
-                <h2>更新情報</h2>
+                <h2><i class="fa fa-bell"></i>更新情報</h2>
                 <ul>
+                    <li><time>2015.10.30</time>　レイアウト・デザインを変更し，出席確認機能を追加しましました．</li>
                     <li><time>2015.6.8</time>　管理者ページで掲示板のリセットが出来るようになりました．</li>
                     <li><time>2015.6.8</time>　予定の削除ができるようになりました．今後の予定ボタンから行えます．</li>
                     <li><time>2015.6.8</time>　更新情報の掲載を開始しました．</li>

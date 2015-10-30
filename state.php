@@ -55,11 +55,6 @@
             }
 
 
-
-
-
-
-
             echo "<h2><time>",date('n月 j日'),"($weekja)","</time> 本日の予定（$taskNo 件）</h2>";
 
             if($taskNo == 0){
@@ -84,14 +79,17 @@
             <!-- 折りたたまれ -->
             <div id="Future_Schedule" style="display:none;clear:both;">
             <!--ここに書いたものが上述の「クリックで展開」をクリックすると表示される-->
-            <table border="1"></th><tr><th>日付</th><th>時間</th><th>場所</th><th>内容</th></tr><br />
-            <?php 
+            <table border="1"><tr><th>日付</th><th>時間</th><th>場所</th><th>内容</th></tr><br />
+            <?php
                 
             $pdo = new PDO("mysql:dbname={$_SESSION['dbname']}", "{$_SESSION['dbusername']}", "{$_SESSION['dbpass']}");
             if(empty($_SESSION['userId']))
                 $st = $pdo->query("SELECT * FROM task WHERE id IS NULL ORDER BY date ASC");//SQL文の発行
             else
-                $st = $pdo->query("SELECT * FROM task WHERE id IS NULL OR id = {$_SESSION['userId']} ORDER BY date ASC");//SQL文の発行
+                $st = $pdo->query("SELECT * FROM task WHERE id IS NULL OR id = {$_SESSION['userId']} ORDER BY date ASC");
+
+            //終了した予定の削除
+            $st1 = $pdo->query("DELETE FROM task WHERE date < now() - INTERVAL 1 DAY");
 
         
         
@@ -108,15 +106,12 @@
                 echo "<td><form name='taskcansel' action='task_insert.php' method='post'>";
                 echo "<input type='hidden' name='deldate' value='$date'>";
                 echo "<input type='hidden' name='delcontent' value='$content'>";
-                echo "<input type='submit' value='取り消し'>";
+                echo "<input type=\"submit\" value=\"取り消し\" onClick=\"return check('この予定を取り消します．本当によろしいですか？')\">";
                 echo "</form></td>";
             }
-            
                 
-            echo "</tr>";    
+            echo "</tr>";
                 
-                
-            
         }
         
             ?>
@@ -128,7 +123,7 @@
         </section>
         
         <section id="now">
-            <h2>在室状況</h2>
+            <h2><i class="fa fa-child"></i>在室状況</h2>
             <div id="member">
                 <ul id="memberList">
                 <?php

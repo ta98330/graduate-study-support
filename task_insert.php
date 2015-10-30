@@ -35,8 +35,7 @@
         $st->execute(array($_POST['date'], $_POST['time'], $_POST['place'], $_POST['content']));
         echo "<p>予定を追加しました．</p>";
         
-        //終了した予定の削除
-        $st1 = $pdo->query("DELETE FROM task WHERE date < now() - INTERVAL 1 DAY");
+        
         
     }
     /*else{

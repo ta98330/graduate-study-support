@@ -7,8 +7,12 @@ body{
     margin: 0 auto;
     width: 98%;
     max-width: 1200px;
-    background-color: #FFFAFA;
+    background-color: #e8eded;
     
+}
+
+section h2 {
+    font-size: 120%;
 }
 
 /*==================================
@@ -103,15 +107,36 @@ body{
 }
     
     
+/*==================================
+index
+====================================*/
+#loginform {
+    text-align: center;
+    
+}
 
+#loginform label {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    
+}
 
-
+#loginform input {
+    margin-bottom: 5px;
+    
+}
 
 /*==================================
 すべての表
 ====================================*/
 table {
     margin: 0 auto;
+    text-align:center;
+    background-color: white;
+}
+
+table th {
     text-align:center;
     
 }
@@ -136,11 +161,15 @@ main
 }
 
 #main section {
-    flex: 1;
+    //flex: 1;
+}
+
+#main #registration {
+    order: -1;
 }
 
 #main #personal_schedule {
-    flex: 9;
+    //flex: 9;
 }
 
 
@@ -252,6 +281,10 @@ header a:first-child:hover {
 	text-decoration:none;
 }
 
+#member ul li a:hover{
+	color: #b900db;
+}
+
 #member span {
     position: relative;
     top: 0px;
@@ -304,7 +337,7 @@ header a:first-child:hover {
 登下校登録
 ====================================*/
 #registration {
-    
+    min-width: 40%;
 }
 
 #registration form {
@@ -394,75 +427,12 @@ header a:first-child:hover {
     
 }
 
-/*==================================
-google カレンダー
-====================================*/
-#calendar {
-    
-    
-    
-    
-}
-
-iframe {
-    width: 100%;
-    height: 500px;
-   
-    
-}
-
-
-
-
-
-
-/*==================================
-簡易掲示板
-====================================*/
-#bbs {
-    
-    
-}
-
-#bbs ul {
-    background-color: #228B22;
-    color: #FFFFFF;
-    padding: 5px;
-    height: 30em;
-    border: solid black;
-    font-size: 85%;
-    overflow: auto;
-    
-}
-
-#bbs ul li {
-    list-style-type:none;
-    
-    
-}
-
-
-textarea {/*bbs内容*/
-    width: 70%;
-    height: 3em;
-}
-
-/*==================================
-twitter
-====================================*/
-#twitter {
-    
-    
-}
-
-
-
 
 /*==================================
 個人予定
 ====================================*/
 #personal_schedule {
-    
+    min-width: 50%;
     
     
     
@@ -501,15 +471,11 @@ twitter
 
 
 
-
-
-
-
 /*==================================
 全体予定登録
 ====================================*/
 #memtask {
-    
+    min-width: 30%;
     
     
 }
@@ -527,7 +493,7 @@ twitter
 個人予定登録
 ====================================*/
 #pertask {
-    
+    min-width: 30%;
     
 }
 
@@ -535,6 +501,81 @@ twitter
     color: blue;
     
 }
+
+
+
+
+/*==================================
+google カレンダー
+====================================*/
+#calendar {
+    min-width: 50%;
+    
+    
+    
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+   
+    
+}
+
+
+
+
+
+
+/*==================================
+簡易掲示板
+====================================*/
+#bbs {
+    min-width: 45%;
+    
+}
+
+#bbs ul {
+    background-color: #228B22;
+    color: #FFFFFF;
+    padding: 5px;
+    height: 30em;
+    border: solid black;
+    font-size: 85%;
+    overflow: auto;
+    
+}
+
+#bbs ul li {
+    list-style-type:none;
+    
+    
+}
+
+
+textarea {/*bbs内容*/
+    width: 70%;
+    height: 3em;
+}
+
+/*==================================
+twitter
+====================================*/
+#twitter {
+    
+    
+}
+
+
+
+/*==================================
+出席確認
+====================================*/
+#at_check {
+    min-width: 30%;
+}
+
+
 
 /*==================================
 更新情報
@@ -572,10 +613,18 @@ hr {
 フッター
 ====================================*/
 #footer {
-    background-color: indianred;
-    
+    background-color:rgba(19, 62, 49, 0.84);
+    text-align: center;
 }
 
+#footer a {
+    color: azure;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #63fcf0;;
+}
 
 
 /*==================================
