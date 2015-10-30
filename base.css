@@ -313,11 +313,6 @@ header a:first-child:hover {
 
 
 
-
-#reload {//更新ボタン
-    
-}
-
 /*==================================
 ユーザーバー
 ====================================*/
@@ -370,6 +365,13 @@ header a:first-child:hover {
 
 
 }
+
+#registration select {
+    display: inline-block;
+    margin-top: 45px;
+    height: 100%;
+}
+
 
 #registration input[disabled] {
     background-color: dimgray;
@@ -681,10 +683,24 @@ admin
     }
     
     
+    
 
 }
 
+/*--------------スマートフォンのスタイル-----------------*/
+@media all and (max-width: 480px) {
+    #calendar {
+        display: none;
+    }
+    
+    #registration input {
+        -webkit-appearance:  none;
+        
 
+    }
+    
+    
+}
 
 
 

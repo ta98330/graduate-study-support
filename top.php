@@ -45,7 +45,6 @@
                     echo "</form>";
 
                     echo "<form method='post' action='situation_update.php' id='joukyou'>";
-                    echo "<p>";
                     echo "<select name='situation'>";
                     echo "<option value='kitaku'>帰宅</option>";
                     echo "<option value='kisei'>帰省</option>";
@@ -53,7 +52,6 @@
                     echo "</select>";
                     echo "<input type='submit' value='状況変更'>";
                     echo "</form>";
-                    echo "</p>";
                 }
                 else if(empty($end)){
                     echo "<form method='post' action='time_counter.php'>";
@@ -61,8 +59,7 @@
                     echo "<input type='submit' value='下校' name='out' id='gekou'>";
                     echo "</form>";
 
-                    echo "<form method='post' action='situation_update.php' id='joukyou'>";    
-                    echo "<p>";
+                    echo "<form method='post' action='situation_update.php' id='joukyou'>";
                     echo "<select name='situation'>";
                     echo "<option value='zaishitsu'>在室</option>";
                     echo "<option value='jugyou'>授業</option>";
@@ -70,8 +67,7 @@
                     echo "<option value='kounai'>校内</option>";
                     echo "</select>";
                     echo "<input type='submit' value='状況変更'>";
-                    echo "</p>";
-                echo "</form>";
+                    echo "</form>";
                 }
                 else{
                     echo "<form method='post' action='time_counter.php'>";
@@ -80,16 +76,14 @@
                     echo "<input type='submit' value='下校\n取り消し\n$stay_time' name='outreset' id='regekou'>";
                     echo "</form>";
 
-                    echo "<form method='post' action='situation_update.php' id='joukyou'>";    
-                    echo "<p>";
+                    echo "<form method='post' action='situation_update.php' id='joukyou'>";
                     echo "<select name='situation'>";
                     echo "<option value='kitaku'>帰宅</option>";
                     echo "<option value='kisei'>帰省</option>";
                     echo "<option value='syuukatsu'>就活</option>";
                     echo "</select>";
                     echo "<input type='submit' value='状況変更'>";
-                    echo "</p>";
-                echo "</form>";
+                    echo "</form>";
                 }
                 ?>
 
@@ -247,7 +241,7 @@
             <section id="update">
                 <h2><i class="fa fa-bell"></i>更新情報</h2>
                 <ul>
-                    <li><time>2015.10.30</time>　レイアウト・デザインを変更し，出席確認機能を追加しましました．</li>
+                    <li><time>2015.10.30</time>　レイアウト・デザインを変更し，出席確認機能を追加しました．</li>
                     <li><time>2015.6.8</time>　管理者ページで掲示板のリセットが出来るようになりました．</li>
                     <li><time>2015.6.8</time>　予定の削除ができるようになりました．今後の予定ボタンから行えます．</li>
                     <li><time>2015.6.8</time>　更新情報の掲載を開始しました．</li>
