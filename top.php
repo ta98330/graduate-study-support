@@ -21,7 +21,7 @@
         <div id="main">
 
             <section id="registration">
-                <h2><i class="fa fa-pencil"></i>登下校登録</h2>
+                <h2><i class="fa fa-graduation-cap"></i>登下校登録</h2>
                 <button onclick="start()"><i class="fa fa-map-pin"></i>位置情報取得</button>
                 <div id='message'></div>
 
@@ -163,7 +163,7 @@
             </section><!--calendar-->
 
             <section id="bbs">
-                <h2><i class="fa fa-comments"></i>簡易掲示板</h2>
+                <h2><i class="fa fa-pencil-square-o"></i>簡易掲示板</h2>
                 <ul>
                 <?php
                 $pdo = new PDO("mysql:dbname={$_SESSION['dbname']}", "{$_SESSION['dbusername']}", "{$_SESSION['dbpass']}");
@@ -239,7 +239,7 @@
 
 
             <section id="update">
-                <h2><i class="fa fa-bell"></i>更新情報</h2>
+                <h2><i class="fa fa-info-circle"></i>更新情報</h2>
                 <ul>
                     <li><time>2015.10.30</time>　レイアウト・デザインを変更し，出席確認機能を追加しました．</li>
                     <li><time>2015.6.8</time>　管理者ページで掲示板のリセットが出来るようになりました．</li>

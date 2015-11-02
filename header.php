@@ -15,5 +15,5 @@
     <body>
     <div id="pagebody">
         <header>
-            <h1 id="top"><a href="http://buturi.heteml.jp/student/2015/index.html">情報物理研究室2015</a> <a href="index.php">卒検支援システム</a></h1>
+            <h1 id="top">情報物理研究室2015 卒検支援システム</a></h1>
         </header>
