@@ -67,7 +67,7 @@
                     echo "$n 件目&emsp; $time[$i]&emsp; $place[$i]&emsp; $content[$i]&emsp;&emsp;&emsp;&emsp;";
                 }
                 echo "</MARQUEE>";
-            }            
+            }
             ?>
             
             <!-- 折りたたみ -->
@@ -150,7 +150,7 @@
                     $situation = htmlspecialchars($row['situation']);
                     
                     
-                   //画像リンク先各ホームページモード                   
+                   //画像リンク先各ホームページモード
                     /*echo "<li><a href='http://buturi.heteml.jp/student/2015/$lnRuby/'><img src=http://buturi.heteml.jp/student/2015/images/profile/$lnRuby.jpg width=100 height=100 alt='No image'><img src=images/$situation.gif class='situ' width=60 height=60 alt='$situation'><br /><span>$name</span></a></li>";*/
                     
                     
