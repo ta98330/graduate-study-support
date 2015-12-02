@@ -1,3 +1,4 @@
+<?php var_dump($_POST);?>
 <?php
 
 require "spheader.php";//ヘッダー読み込み
