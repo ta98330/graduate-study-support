@@ -1,18 +1,23 @@
 <?php
 //POSTデータ
+/*
 $data = array(
     "user" => "71",
     "pass" => "pass",
     "come" => "true"
 );
+*/
+
+$data = "user=1&pass=pass&come=true";
  
 // URLを指定
 
 //ローカル
-$url = "http://192.168.11.24/test/attendance/pi_attend.php";
+//$url = "http://192.168.11.24/test/attendance/pi_attend.php";
 
 //heteml
-//$url = "http://buturi.heteml.jp/student/2015/misawa/test/attendance/pi_attend.php";
+$url = "http://buturi.heteml.jp/student/2015/misawa/test/attendance/pi_attend.php";
+//$url = "http://heteml.jp/home/sites/heteml/users/b/u/t/buturi/web/student/2015/misawa/test/attendance/pi_attend.php";
 
 //接続テスト
 //$url = "http://192.168.11.20/test2.php";
@@ -21,7 +26,10 @@ $url = "http://192.168.11.24/test/attendance/pi_attend.php";
 // POST用関数
 function http_post ($url, $data)
 {
-  $data_url = http_build_query ($data);
+  //$data_url = http_build_query ($data);
+  
+  $data_url = $data;
+  
   $data_len = strlen ($data_url);
  
   return array (
@@ -32,7 +40,7 @@ function http_post ($url, $data)
               array ('http' =>
                   array (
                       'method'=>'POST',
-                      'header'=>"Content-Type: application/x-www-form-urlencoded\r\nContent-Length: $data_len\r\n",
+                      'header'=>"Content-Type: application/x-www-form-urlencoded\r\nContent-Length: $data_len",
                       'ignore_errors' => true,
                       'content'=>$data_url)
                   )
@@ -45,6 +53,8 @@ function http_post ($url, $data)
 // 送信
 $result = http_post($url, $data);
 ?>
+
+
 
 受信データ<br />
 <pre>

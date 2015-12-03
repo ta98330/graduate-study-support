@@ -1,8 +1,13 @@
-<?php var_dump($_POST);?>
 <?php
 
 require "spheader.php";//ヘッダー読み込み
 
+print((empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
+
+echo $_SERVER['SERVER_NAME'];
+echo 
+
+var_dump($_POST);
 /*
 $_POST['come'] = 'true';
 $_POST['user'] = '71';
@@ -50,3 +55,10 @@ if(!empty($_POST['outreset'])){//下校取り消し
     header('Location: top.php');
 }
 */
+
+//postリクエストのログ
+$postlog = '[POST] | '.date( "Y/m/d (D) H:i:s", time() );
+foreach ($_POST as $val) {
+$postlog .= '   |   '.$val;
+}
+dbg_log($postlog);
