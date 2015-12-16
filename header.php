@@ -7,6 +7,7 @@
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="base.css">
+        <link rel="shortcut icon" href="images/maru.gif" type="image/gif">
         
         <script src="location.js"></script>
         <script src="attendance01.js"></script>

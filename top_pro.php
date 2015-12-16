@@ -122,6 +122,8 @@
 
                     <textarea name="contributeContent" maxlength='200' required></textarea>
                     <input type="submit" value='書き込む'>
+                </form>
+                <form action='bbs.php' method='post'>
                     <input type="submit" name="alldel" value="※掲示板リセット※" onClick="return check('掲示板がリセットされます．本当によろしいですか？\n※元には戻せません．')">
                 </form>
             </section><!--bbs-->
