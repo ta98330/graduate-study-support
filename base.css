@@ -201,6 +201,7 @@ header h1 {
     max
     line-height: 50px;
     //width: 50%;
+    padding-top: 1%;
     padding-left: 15vw;
     //float: left;
 	}
@@ -211,7 +212,7 @@ header a {
 	}
 
 header a:first-child:hover {
-	color: #63fcf0;
+	//color: #63fcf0;
 	}
 
 
@@ -715,6 +716,41 @@ admin
         
 
     }
+    
+    /*==================================
+    ヘッダ
+    ====================================*/
+    header {
+        position: relative;
+        width: 100vw;
+        left: -1%;
+        
+        }
+
+    header h1 {
+        font-size:30px;
+        }
+    
+    
+    
+    /*==================================
+    フッター
+    ====================================*/
+    #footer {
+        position: absolute;
+        width: 100vw;
+        left: -1%;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 }

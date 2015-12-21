@@ -54,7 +54,7 @@ if($_POST['pass'] == "pass"){
         $st2 = $pdo->query("UPDATE member SET situation = 'zaishitsu' WHERE id = {$_POST['user']}");//現状の更新
         
         //ツイート
-        $res = $connection->post("statuses/update", array("status" => $twittertime.$name.'さんが登校しました. #卒検支援'));
+        $res = $connection->post("statuses/update", array("status" => $twittertime.$name.'さんが登校しました. #卒研支援'));
         
         
         
@@ -76,7 +76,7 @@ if($_POST['pass'] == "pass"){
         
         
         //ツイート
-        $res = $connection->post("statuses/update", array("status" => $twittertime.$name.'さんが下校しました. #卒検支援'));
+        $res = $connection->post("statuses/update", array("status" => $twittertime.$name.'さんが下校しました. #卒研支援'));
 
     }
     else{//下校取り消し
@@ -85,7 +85,7 @@ if($_POST['pass'] == "pass"){
         //echo "stay",$stay_time;
         
         //ツイート
-        $res = $connection->post("statuses/update", array("status" => $twittertime.$name.'さんの下校が取り消されました. #卒検支援'));
+        $res = $connection->post("statuses/update", array("status" => $twittertime.$name.'さんの下校が取り消されました. #卒研支援'));
     }
 
 

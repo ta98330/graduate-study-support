@@ -29,7 +29,7 @@ if(!empty($_POST['come']) or (!empty($_POST['out']))){
         
         $st = $pdo->query("UPDATE member SET situation = 'zaishitsu' WHERE id = {$_SESSION['userId']}");//現状の更新
         //ツイート
-        $res = $connection->post("statuses/update", array("status" => $twittertime.$_SESSION['userName'].'さんが登校しました. #卒検支援'));
+        $res = $connection->post("statuses/update", array("status" => $twittertime.$_SESSION['userName'].'さんが登校しました. #卒研支援'));
         
         //echo "登校時間を登録しました．",'<br /><a href="top.php">戻る</a>';
          header('Location: top.php');
@@ -41,7 +41,7 @@ if(!empty($_POST['come']) or (!empty($_POST['out']))){
         $st = $pdo->query("UPDATE member SET situation = 'kitaku' WHERE id = {$_SESSION['userId']}");//現状の更新
         
         //ツイート
-        $res = $connection->post("statuses/update", array("status" => $twittertime.$_SESSION['userName'].'さんが下校しました. #卒検支援'));
+        $res = $connection->post("statuses/update", array("status" => $twittertime.$_SESSION['userName'].'さんが下校しました. #卒研支援'));
 
         
         //echo "下校時間を登録しました．",'<br /><a href="top.php">戻る</a>';
@@ -58,7 +58,7 @@ if(!empty($_POST['outreset'])){//下校取り消し
     $st = $pdo->query("UPDATE member SET situation = 'zaishitsu' WHERE id = {$_SESSION['userId']}");//現状の更新
     
     //ツイート
-        $res = $connection->post("statuses/update", array("status" => $twittertime.$_SESSION['userName'].'さんの下校が取り消されました. #卒検支援'));
+        $res = $connection->post("statuses/update", array("status" => $twittertime.$_SESSION['userName'].'さんの下校が取り消されました. #卒研支援'));
     
     //echo "下校時間を取り消しました．",'<br /><a href="top.php">戻る</a>';
     header('Location: top.php');
