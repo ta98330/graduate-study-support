@@ -11,10 +11,10 @@
         
         <script src="location.js"></script>
         <script src="attendance01.js"></script>
-        <title>卒検支援</title>
+        <title>卒研支援</title>
     </head>
     <body>
     <div id="pagebody">
         <header>
-            <h1 id="top"><a href="index.php">情報物理研究室2015</a><a href="index.php"> 卒検支援システム</a></h1>
+            <h1 id="top"><a href="index.php">情報物理研究室2015</a><a href="index.php"> 卒研支援システム</a></h1>
         </header>
